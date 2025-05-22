@@ -1,0 +1,239 @@
+
+/* General Styles */
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+}
+
+section {
+    padding: 20px;
+    margin: 20px 0;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2, h3, h4 {
+    color: #333;  /* Darker color for headings */
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    padding: 30px;
+    background-color: #e6f7ff; /* Light background for contrast */
+}
+
+.hero img {
+    width: 150px;  /* Adjust as needed */
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* More pronounced shadow */
+    transition: transform 0.3s ease;
+}
+
+.hero img:hover {
+    transform: scale(1.1);
+}
+
+.hero h3 {
+    font-size: 2em;
+    margin-bottom: 5px;
+    color: #1a75ff; /* Electric blue */
+}
+
+.hero div:not(.container) {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+    color: #555;
+    animation: fadeIn 1.5s ease-in-out; /* Added animation */
+}
+
+.hero .container {
+
+    margin-top: 20px;
+}
+
+.hero .container h4 {
+    font-style: italic;
+    color: #777;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
+/* About Me Section */
+.about_me {
+    text-align: justify;
+
+}
+
+/* Skills Section */
+.skill {
+    text-align: center;
+}
+
+.skill h1 {
+    margin-bottom: 20px;
+}
+
+.skill h5 {
+    color: #1a75ff;
+    margin-bottom: 10px;
+}
+
+.skill div p {
+    margin: 5px 0;
+}
+
+
+/* Spiritual Section */
+.spritual {
+    text-align: center;
+}
+
+/* Certificates Section */
+.CERT {
+    overflow: hidden; /* Important for the animation */
+    white-space: nowrap; /* Keep images in a row */
+    padding: 10px;
+}
+
+.CERT img {
+    height: 80px; /* Adjust as needed */
+    margin-right: 10px;
+
+    display: inline-block; /* Important for horizontal scrolling */
+    animation: scrollCertificates 20s linear infinite; /* Adjust duration as needed */
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes scrollCertificates {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+
+/* Work Experience Section */
+.WORK {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.WORK img {
+    width: 100px; /* Adjust as needed */
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #1a75ff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+
+}
+
+.WORK img:hover {
+    transform: scale(1.1);
+}
+
+/* Tools Section */
+.tool {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr)); /* Responsive grid */
+    gap: 15px;
+    justify-items: center; /* Center items in each grid cell */
+}
+
+.tool img {
+    width: 80px; /* Adjust as needed */
+    height: 80px;
+    object-fit: contain; /* Keep aspect ratio */
+    padding: 5px;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease-in-out;
+}
+
+.tool img:hover {
+    transform: scale(1.2);
+}
+
+/* Contact Section */
+.contact {
+
+    text-align: center;
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+
+.contact a {
+    display: block;
+    margin-bottom: 10px;
+    color: #1a75ff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.contact a:hover {
+    color: #0d47a1;
+}
+
+/* Responsive adjustments */
+
+@media (max-width: 768px) {
+    .hero {
+        padding: 20px;
+    }
+
+    .hero img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .hero h3 {
+        font-size: 1.5em;
+    }
+
+    .hero div {
+        font-size: 1em;
+    }
+
+    .WORK img {
+
+        width: 80px;
+        height: 80px;
+    }
+
+    .tool img {
+        width: 60px;
+        height: 60px;
+    }
+}
+
